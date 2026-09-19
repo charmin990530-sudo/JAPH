@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios · JAPH</title>
+  <meta name="description" content="Páginas web, apps web y móviles, automatización, marketing digital, producción de video y branding.">
+  <meta name="theme-color" content="#070711">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
+</head>
+<body>
+  <a class="salta-al-contenido" href="#contenido">Saltar al contenido</a>
+  <div class="grano" aria-hidden="true"></div>
+  <div class="progreso" data-progreso aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+  <div class="cursor-halo" data-cursor-halo aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="marca" href="index.html" aria-label="JAPH, ir a la portada">
+      <span class="marca-semilla" aria-hidden="true"></span>JAPH
+    </a>
+    <nav class="nav-enlaces" aria-label="Navegación principal">
+      <a class="nav-enlace" href="index.html">Inicio</a>
+      <a class="nav-enlace" href="servicios.html">Servicios</a>
+      <a class="nav-enlace" href="proyectos.html">Proyectos</a>
+      <a class="nav-enlace" href="nosotros.html">Nosotros</a>
+      <a class="nav-enlace" href="contacto.html">Contacto</a>
+      <a class="boton" href="contacto.html" data-magnetico="0.22">Empezar un proyecto</a>
+    </nav>
+    <button class="menu-boton" type="button" data-menu-boton aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu data-abierto="false">
+    <nav aria-label="Navegación del menú">
+      <ul class="menu-lista">
+        <li class="menu-item"><a href="index.html">Inicio <span>01</span></a></li>
+        <li class="menu-item"><a href="servicios.html">Servicios <span>02</span></a></li>
+        <li class="menu-item"><a href="proyectos.html">Proyectos <span>03</span></a></li>
+        <li class="menu-item"><a href="nosotros.html">Nosotros <span>04</span></a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto <span>05</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-pie">
+      <a href="mailto:hola@japh.studio">hola@japh.studio</a>
+      <a href="https://wa.me/573000000000">WhatsApp</a>
+      <span>Bogotá · trabajo remoto</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <section class="envoltura portada-pagina" aria-labelledby="titulo-servicios">
+      <h1 id="titulo-servicios" data-lineas>Siete servicios<br>que se necesitan entre sí.</h1>
+      <p class="plomo" data-revelar>
+        Cada uno funciona por separado. Juntos forman un sistema donde lo que aprende el
+        marketing cambia el producto, y lo que mide el producto cambia la campaña.
+      </p>
+    </section>
+
+    <!-- Carril horizontal: el scroll vertical desplaza las tarjetas -->
+    <section class="carril" data-carril aria-label="Servicios de JAPH">
+      <div class="carril-pista" data-carril-pista>
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">01</span>
+          <div>
+            <h2>Páginas web</h2>
+            <p>Sitios corporativos, landings y tiendas. Rápidos de verdad y con contenido que tu equipo puede editar sin ayuda.</p>
+            <ul>
+              <li>Diseño a medida, sin plantillas</li>
+              <li>Optimización de carga y rendimiento</li>
+              <li>SEO técnico y analítica instalada</li>
+              <li>Panel de contenido para tu equipo</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">02</span>
+          <div>
+            <h2>Aplicaciones web</h2>
+            <p>Portales de cliente, paneles internos y herramientas que reemplazan el archivo de Excel compartido.</p>
+            <ul>
+              <li>Autenticación y perfiles de acceso</li>
+              <li>Integración con tus sistemas actuales</li>
+              <li>Reportes en tiempo real</li>
+              <li>Documentación para tu equipo técnico</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">03</span>
+          <div>
+            <h2>Apps móviles</h2>
+            <p>Una base de código para iOS y Android, publicada en tiendas y preparada para actualizarse sin fricción.</p>
+            <ul>
+              <li>Prototipo navegable antes de programar</li>
+              <li>Notificaciones y modo sin conexión</li>
+              <li>Publicación en App Store y Google Play</li>
+              <li>Seguimiento de uso desde el primer día</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">04</span>
+          <div>
+            <h2>Automatización</h2>
+            <p>Unimos correo, CRM, facturación y mensajería para que las tareas repetitivas dejen de consumir horas del equipo.</p>
+            <ul>
+              <li>Mapa del proceso actual</li>
+              <li>Flujos automáticos entre herramientas</li>
+              <li>Alertas cuando algo falla</li>
+              <li>Atención automatizada en WhatsApp</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">05</span>
+          <div>
+            <h2>Marketing digital</h2>
+            <p>Pauta, contenido y correo con una pregunta al frente: cuánto cuesta atraer un cliente que se queda.</p>
+            <ul>
+              <li>Estrategia por canal y por etapa</li>
+              <li>Gestión de pauta en Meta y Google</li>
+              <li>Automatización de correo</li>
+              <li>Reporte mensual con decisiones</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">06</span>
+          <div>
+            <h2>Producción de video</h2>
+            <p>Piezas audiovisuales pensadas desde el formato y el canal donde van a publicarse, no adaptadas después.</p>
+            <ul>
+              <li>Guion y dirección</li>
+              <li>Video corporativo y de producto</li>
+              <li>Formatos verticales para redes</li>
+              <li>Banco de recursos reutilizables</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <span class="tarjeta-numero" aria-hidden="true">07</span>
+          <div>
+            <h2>Branding</h2>
+            <p>Identidad visual y verbal, con un sistema de diseño que mantiene coherente todo lo que publiques después.</p>
+            <ul>
+              <li>Identidad y manual de marca</li>
+              <li>Tono de voz y mensajes clave</li>
+              <li>Sistema de diseño reutilizable</li>
+              <li>Plantillas para el equipo interno</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Preguntas -->
+    <section class="seccion" aria-labelledby="titulo-preguntas">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-preguntas" data-revelar>Preguntas antes de contratar</h2>
+        </div>
+
+        <div class="acordeon">
+          <details class="acordeon-item">
+            <summary class="acordeon-boton">
+              ¿Puedo contratar un solo servicio?
+              <span class="acordeon-cruz" aria-hidden="true"></span>
+            </summary>
+            <div class="acordeon-panel"><p>Sí. La mayoría de proyectos empieza por uno solo, normalmente el sitio o la automatización. El siguiente paso se propone únicamente cuando los datos del proyecto lo justifican.</p></div>
+          </details>
+          <details class="acordeon-item">
+            <summary class="acordeon-boton">
+              ¿Cuánto tarda un proyecto?
+              <span class="acordeon-cruz" aria-hidden="true"></span>
+            </summary>
+            <div class="acordeon-panel"><p>Depende del alcance. En el diagnóstico definimos un cronograma con fechas concretas por entrega, y lo mantenemos visible durante todo el proyecto.</p></div>
+          </details>
+          <details class="acordeon-item">
+            <summary class="acordeon-boton">
+              ¿El código y las cuentas quedan a mi nombre?
+              <span class="acordeon-cruz" aria-hidden="true"></span>
+            </summary>
+            <div class="acordeon-panel"><p>Sí. Repositorio, dominio, alojamiento y cuentas de publicidad se crean o se transfieren a tu nombre. Trabajamos con accesos, no con propiedad sobre tus activos.</p></div>
+          </details>
+          <details class="acordeon-item">
+            <summary class="acordeon-boton">
+              ¿Trabajan junto a equipos internos?
+              <span class="acordeon-cruz" aria-hidden="true"></span>
+            </summary>
+            <div class="acordeon-panel"><p>Sí, y suele ser lo que mejor funciona. Entregamos documentación, sesiones de traspaso y convenciones de código para que tu equipo pueda continuar sin depender de nosotros.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modelos de trabajo -->
+    <section class="seccion" aria-labelledby="titulo-modelos">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-modelos" data-revelar>Tres formas de trabajar juntos</h2>
+          <p class="nota-ejemplo" data-revelar>
+            <strong>Precios de ejemplo.</strong> Los valores de esta sección son
+            marcadores de posición. Define tus tarifas reales antes de publicar, o
+            sustituye la cifra por el texto “Según alcance”.
+          </p>
+        </div>
+
+        <div class="malla malla--3" data-ejemplo>
+          <article class="plan" data-revelar>
+            <h3>Pieza suelta</h3>
+            <p class="plan-precio">Desde $000</p>
+            <span class="sello-ejemplo">Precio de ejemplo</span>
+            <p class="suave">Un entregable concreto con alcance cerrado.</p>
+            <ul>
+              <li>Sitio, landing o identidad</li>
+              <li>Cronograma definido al inicio</li>
+              <li>Periodo de ajustes incluido</li>
+            </ul>
+          </article>
+
+          <article class="plan plan--destacado" data-revelar>
+            <h3>Ecosistema</h3>
+            <p class="plan-precio">Desde $000</p>
+            <span class="sello-ejemplo">Precio de ejemplo</span>
+            <p class="suave">Varios servicios diseñados como un solo sistema.</p>
+            <ul>
+              <li>Diagnóstico y arquitectura</li>
+              <li>Construcción por entregas</li>
+              <li>Traspaso documentado al equipo</li>
+            </ul>
+          </article>
+
+          <article class="plan" data-revelar>
+            <h3>Acompañamiento mensual</h3>
+            <p class="plan-precio">Desde $000/mes</p>
+            <span class="sello-ejemplo">Precio de ejemplo</span>
+            <p class="suave">Mantenimiento, mejoras y crecimiento continuo.</p>
+            <ul>
+              <li>Horas de desarrollo reservadas</li>
+              <li>Monitoreo y copias de seguridad</li>
+              <li>Reporte con recomendaciones</li>
+            </ul>
+          </article>
+        </div>
+
+        <p style="margin-top:3rem" data-revelar>
+          <a class="boton boton--solido" href="contacto.html" data-magnetico>Pedir una cotización</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltura">
+      <p class="pie-titular">JAPH</p>
+      <div class="pie-malla">
+        <div class="pie-columna">
+          <p class="suave">Agencia de ecosistemas digitales. Convertimos ideas en sistemas que funcionan: web, aplicaciones, automatización, marketing, video y marca.</p>
+        </div>
+        <div class="pie-columna">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@japh.studio">hola@japh.studio</a></li>
+            <li><a href="https://wa.me/573000000000">+57 300 000 0000</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+          </ul>
+          <p class="suave" style="font-size:var(--t--1);margin-top:.75rem">Datos de contacto de ejemplo: reemplázalos por los reales.</p>
+        </div>
+      </div>
+      <div class="pie-base">
+        <span>© 2026 JAPH. Bogotá, Colombia.</span>
+        <span>
+          <a class="enlace-subrayado" href="privacidad.html">Privacidad</a>
+          &nbsp;&nbsp;
+          <a class="enlace-subrayado" href="terminos.html">Términos</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

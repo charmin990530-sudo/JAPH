@@ -1,0 +1,168 @@
+/* ==========================================================================
+   JAPH — servicios.css  ·  carril horizontal + detalle de servicios
+   ========================================================================== */
+
+.portada-pagina {
+  padding-block: clamp(9rem, 22vh, 14rem) clamp(3rem, 7vh, 5rem);
+  display: grid;
+  gap: 1.75rem;
+}
+
+.portada-pagina h1 { font-size: var(--t-4); }
+
+/* --- Carril horizontal fijado ------------------------------------------ */
+.carril { position: relative; }
+
+.carril-pista {
+  display: flex;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding-inline: var(--gutter);
+  padding-block: 1rem 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.carril-pista::-webkit-scrollbar { display: none; }
+.carril-pista.arrastrando { cursor: grabbing; scroll-snap-type: none; }
+
+/* Cuando scroll.js logra fijar la sección, el carril deja de scrollear solo */
+.carril.esta-fijada { height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.carril.esta-fijada .carril-pista { overflow: visible; }
+
+.tarjeta-servicio {
+  flex: 0 0 min(88vw, 27rem);
+  scroll-snap-align: center;
+  min-height: 27rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  border: 1px solid var(--linea);
+  border-radius: 24px;
+  background: linear-gradient(170deg, var(--tinta-media), var(--fondo) 62%);
+  transition: border-color var(--medio), translate var(--medio);
+}
+
+.tarjeta-servicio:hover { border-color: var(--linea-fuerte); translate: 0 -8px; }
+
+.tarjeta-servicio h2 { font-size: var(--t-2); }
+.tarjeta-servicio p { color: var(--texto-suave); font-size: var(--t--1); }
+
+.tarjeta-servicio ul { display: grid; gap: 0.5rem; margin-top: 1.25rem; }
+
+.tarjeta-servicio li {
+  font-size: var(--t--1);
+  color: var(--texto-suave);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.tarjeta-servicio li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--neon);
+}
+
+.tarjeta-servicio:nth-child(even) li::before { background: var(--violeta); }
+
+.tarjeta-numero {
+  font-family: var(--display);
+  font-size: var(--t-3);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--linea-fuerte);
+  line-height: 0.9;
+}
+
+/* --- Acordeón nativo (details/summary, sin JavaScript) ------------------ */
+.acordeon { border-top: 1px solid var(--linea); }
+
+.acordeon-item { border-bottom: 1px solid var(--linea); }
+
+.acordeon-boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: clamp(1.25rem, 3vw, 2rem);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--display);
+  font-size: var(--t-2);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  transition: color var(--rapido);
+}
+
+/* Oculta el triángulo por defecto en Safari y Chrome */
+.acordeon-boton::-webkit-details-marker { display: none; }
+
+.acordeon-boton:hover { color: var(--neon); }
+
+.acordeon-boton:focus-visible {
+  outline: 2px solid var(--neon);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.acordeon-cruz {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+
+.acordeon-cruz::before,
+.acordeon-cruz::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform var(--rapido);
+}
+
+.acordeon-cruz::after { transform: rotate(90deg); }
+
+.acordeon-item[open] .acordeon-cruz::after { transform: rotate(0deg); }
+
+.acordeon-panel p {
+  color: var(--texto-suave);
+  padding-bottom: 1.75rem;
+  max-width: 62ch;
+  animation: desplegar 0.4s var(--curva);
+}
+
+@keyframes desplegar {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acordeon-panel p { animation: none; }
+}
+
+/* --- Modelo de trabajo -------------------------------------------------- */
+.plan {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--linea);
+  border-radius: 20px;
+  background: var(--superficie);
+}
+
+.plan--destacado {
+  border-color: rgba(61, 245, 160, 0.45);
+  background: linear-gradient(180deg, rgba(61, 245, 160, 0.07), var(--superficie) 55%);
+}
+
+.plan-precio { font-family: var(--display); font-size: var(--t-3); letter-spacing: -0.04em; }
+.plan ul { display: grid; gap: 0.6rem; font-size: var(--t--1); color: var(--texto-suave); }

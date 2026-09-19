@@ -1,0 +1,145 @@
+/* ==========================================================================
+   JAPH — proyectos.css  ·  índice filtrable y fichas con parallax
+   ========================================================================== */
+
+.portada-proyectos {
+  padding-block: clamp(9rem, 22vh, 14rem) clamp(2.5rem, 6vh, 4rem);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.portada-proyectos h1 { font-size: var(--t-4); }
+
+/* --- Filtros ------------------------------------------------------------ */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-bottom: 2.5rem;
+}
+
+.filtro {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--linea);
+  border-radius: 100px;
+  background: none;
+  font-size: var(--t--1);
+  color: var(--texto-suave);
+  cursor: pointer;
+  transition: color var(--rapido), border-color var(--rapido), background-color var(--rapido);
+}
+
+.filtro:hover { color: var(--texto); border-color: var(--linea-fuerte); }
+
+.filtro[aria-pressed="true"] {
+  background: var(--nube);
+  border-color: var(--nube);
+  color: var(--tinta);
+}
+
+/* --- Índice ------------------------------------------------------------- */
+.indice-proyectos { display: grid; gap: clamp(1rem, 2.5vw, 2rem); }
+
+@media (min-width: 56rem) {
+  .indice-proyectos { grid-template-columns: repeat(2, 1fr); }
+  .proyecto:nth-child(4n + 1),
+  .proyecto:nth-child(4n + 4) { margin-top: 0; }
+  .proyecto:nth-child(4n + 2),
+  .proyecto:nth-child(4n + 3) { margin-top: clamp(2rem, 7vw, 6rem); }
+}
+
+.proyecto {
+  position: relative;
+  display: block;
+  border: 1px solid var(--linea);
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--superficie);
+  transition: border-color var(--medio), opacity 0.4s ease, transform 0.4s var(--curva);
+}
+
+.proyecto[hidden] { display: none; }
+.proyecto:hover { border-color: var(--linea-fuerte); }
+
+.proyecto-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--tinta-media);
+}
+
+.proyecto-pintura {
+  position: absolute;
+  inset: -14%;
+  background: var(--pintura, conic-gradient(from 140deg, #3df5a0, #7c5cff, #ff6b5b, #3df5a0));
+  filter: blur(34px) saturate(1.1);
+  opacity: 0.55;
+  transition: opacity var(--medio), transform 1.2s var(--curva);
+  will-change: transform;
+}
+
+.proyecto:hover .proyecto-pintura { opacity: 0.8; transform: scale(1.06); }
+
+.proyecto-sello {
+  position: absolute;
+  inset: auto auto 1rem 1rem;
+  z-index: 2;
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  font-size: var(--t--1);
+  background: rgba(7, 7, 17, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--linea);
+}
+
+.proyecto-pie {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem clamp(1.25rem, 3vw, 2rem) 1.7rem;
+}
+
+.proyecto-pie h2 { font-size: var(--t-2); }
+.proyecto-pie p { font-size: var(--t--1); color: var(--texto-suave); margin-top: 0.35rem; }
+.proyecto-pie time { font-size: var(--t--1); color: var(--texto-suave); flex: none; }
+
+.vacio {
+  padding: 4rem 0;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+/* --- Caso destacado ----------------------------------------------------- */
+.caso {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  border: 1px solid var(--linea);
+  border-radius: 28px;
+  background: linear-gradient(140deg, var(--tinta-media), var(--fondo) 65%);
+}
+
+@media (min-width: 62rem) { .caso { grid-template-columns: 1fr 1fr; } }
+
+.caso-datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--linea);
+}
+
+.caso-datos span { font-size: var(--t--1); color: var(--texto-suave); }
+
+.caso-lienzo {
+  aspect-ratio: 1;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 107, 91, 0.35), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(61, 245, 160, 0.35), transparent 55%),
+    var(--tinta-alta);
+  border: 1px solid var(--linea);
+}

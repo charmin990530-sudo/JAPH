@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JAPH · Convertimos ideas en ecosistemas digitales</title>
+  <meta name="description" content="JAPH diseña y construye ecosistemas digitales: páginas web, apps web y móviles, automatización, marketing digital, producción de video y branding.">
+  <meta name="theme-color" content="#070711">
+  <meta property="og:title" content="JAPH · Convertimos ideas en ecosistemas digitales">
+  <meta property="og:description" content="Web, apps, automatización, marketing, video y marca. Un solo sistema que crece contigo.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+  <a class="salta-al-contenido" href="#contenido">Saltar al contenido</a>
+  <div class="grano" aria-hidden="true"></div>
+  <div class="progreso" data-progreso aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+  <div class="cursor-halo" data-cursor-halo aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="marca" href="index.html" aria-label="JAPH, ir a la portada">
+      <span class="marca-semilla" aria-hidden="true"></span>JAPH
+    </a>
+    <nav class="nav-enlaces" aria-label="Navegación principal">
+      <a class="nav-enlace" href="index.html">Inicio</a>
+      <a class="nav-enlace" href="servicios.html">Servicios</a>
+      <a class="nav-enlace" href="proyectos.html">Proyectos</a>
+      <a class="nav-enlace" href="nosotros.html">Nosotros</a>
+      <a class="nav-enlace" href="contacto.html">Contacto</a>
+      <a class="boton" href="contacto.html" data-magnetico="0.22">Empezar un proyecto</a>
+    </nav>
+    <button class="menu-boton" type="button" data-menu-boton aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu data-abierto="false">
+    <nav aria-label="Navegación del menú">
+      <ul class="menu-lista">
+        <li class="menu-item"><a href="index.html">Inicio <span>01</span></a></li>
+        <li class="menu-item"><a href="servicios.html">Servicios <span>02</span></a></li>
+        <li class="menu-item"><a href="proyectos.html">Proyectos <span>03</span></a></li>
+        <li class="menu-item"><a href="nosotros.html">Nosotros <span>04</span></a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto <span>05</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-pie">
+      <a href="mailto:hola@japh.studio">hola@japh.studio</a>
+      <a href="https://wa.me/573000000000">WhatsApp</a>
+      <span>Bogotá · trabajo remoto</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="heroe" aria-labelledby="titulo-heroe">
+      <canvas class="heroe-lienzo" data-organismo aria-hidden="true"></canvas>
+      <div class="envoltura heroe-contenido">
+        <h1 class="heroe-titulo" id="titulo-heroe" data-lineas>
+          Convertimos ideas<br>en <em>ecosistemas digitales</em>.
+        </h1>
+        <div class="heroe-fila">
+          <p class="plomo" data-revelar>
+            Diseñamos, construimos y cuidamos la infraestructura digital de tu marca:
+            web, aplicaciones, automatización, marketing, video y branding trabajando
+            como un solo sistema.
+          </p>
+          <div class="heroe-acciones" data-revelar>
+            <a class="boton boton--solido" href="contacto.html" data-magnetico>Empezar un proyecto</a>
+            <a class="boton" href="servicios.html">Conocer los servicios</a>
+          </div>
+        </div>
+      </div>
+      <span class="indicador-scroll" aria-hidden="true">Desliza</span>
+    </section>
+
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta-pista">
+        <span>Páginas web</span><span>·</span><span>Apps web</span><span>·</span>
+        <span>Apps móviles</span><span>·</span><span>Automatización</span><span>·</span>
+        <span>Marketing digital</span><span>·</span><span>Video</span><span>·</span>
+        <span>Branding</span><span>·</span>
+      </div>
+      <div class="cinta-pista">
+        <span>Páginas web</span><span>·</span><span>Apps web</span><span>·</span>
+        <span>Apps móviles</span><span>·</span><span>Automatización</span><span>·</span>
+        <span>Marketing digital</span><span>·</span><span>Video</span><span>·</span>
+        <span>Branding</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- Manifiesto -->
+    <section class="seccion manifiesto" aria-label="Nuestra forma de ver el trabajo digital">
+      <div class="envoltura">
+        <p data-manifiesto>Una presencia digital sana funciona como un ecosistema: el sitio atrae, la automatización responde, el producto retiene, el contenido sostiene y la marca le da sentido a todo lo demás.</p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="seccion" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-servicios" data-revelar>Siete capacidades, un mismo sistema</h2>
+          <p class="plomo" data-revelar>
+            Puedes contratar una sola. Rinden más cuando se alimentan entre ellas.
+          </p>
+        </div>
+
+        <div class="ecosistema-malla">
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h10"/></svg>
+            </span>
+            <div>
+              <h3>Páginas web</h3>
+              <p>Sitios corporativos, landings y tiendas rápidos de cargar y fáciles de actualizar por tu equipo.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/></svg>
+            </span>
+            <div>
+              <h3>Aplicaciones web</h3>
+              <p>Portales, paneles y herramientas internas que reemplazan hojas de cálculo compartidas.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+            </span>
+            <div>
+              <h3>Apps móviles</h3>
+              <p>Aplicaciones para iOS y Android desde una sola base de código, con medición desde el primer día.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg>
+            </span>
+            <div>
+              <h3>Automatización</h3>
+              <p>Conectamos las herramientas que ya pagas para que el trabajo repetitivo deje de ocupar horas.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8"/></svg>
+            </span>
+            <div>
+              <h3>Marketing digital</h3>
+              <p>Estrategia, pauta y correo con reportes que se entienden sin necesidad de traducción técnica.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="m15 12 6-3.5v11z"/></svg>
+            </span>
+            <div>
+              <h3>Producción de video</h3>
+              <p>Piezas corporativas, de producto y formatos verticales pensados para el canal donde van a vivir.</p>
+            </div>
+          </article>
+
+          <article class="capacidad" data-revelar>
+            <span class="capacidad-marca" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+            </span>
+            <div>
+              <h3>Branding</h3>
+              <p>Identidad visual, tono de voz y sistema de diseño para que todo lo anterior se vea como una sola marca.</p>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin-top:2.5rem" data-revelar>
+          <a class="enlace-subrayado" href="servicios.html">Ver el detalle de cada servicio</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="seccion" id="proceso" aria-labelledby="titulo-proceso">
+      <div class="envoltura proceso-envoltura">
+        <div class="proceso-ancla">
+          <h2 id="titulo-proceso" data-revelar>Cómo trabajamos</h2>
+          <p class="plomo" data-revelar>
+            Cuatro fases, siempre en el mismo orden. Cada una termina con algo que puedes
+            ver, probar y aprobar.
+          </p>
+        </div>
+
+        <ol class="proceso-lista">
+          <li class="proceso-paso" data-revelar>
+            <span class="proceso-indice" aria-hidden="true">1</span>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p>Revisamos datos, procesos y competencia. Salimos con un mapa del ecosistema actual y las prioridades que más impacto tienen.</p>
+            </div>
+          </li>
+          <li class="proceso-paso" data-revelar>
+            <span class="proceso-indice" aria-hidden="true">2</span>
+            <div>
+              <h3>Diseño del sistema</h3>
+              <p>Arquitectura, identidad y prototipo navegable. Todo se aprueba contigo antes de escribir el código definitivo.</p>
+            </div>
+          </li>
+          <li class="proceso-paso" data-revelar>
+            <span class="proceso-indice" aria-hidden="true">3</span>
+            <div>
+              <h3>Construcción</h3>
+              <p>Entregas periódicas en un entorno real. Ves el avance sin esperar al final y puedes corregir el rumbo a tiempo.</p>
+            </div>
+          </li>
+          <li class="proceso-paso" data-revelar>
+            <span class="proceso-indice" aria-hidden="true">4</span>
+            <div>
+              <h3>Acompañamiento</h3>
+              <p>Medimos, ajustamos y hacemos crecer el sistema. Cada reporte llega con decisiones recomendadas, no solo con gráficas.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="seccion" id="proyectos-destacados" aria-labelledby="titulo-destacados">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-destacados" data-revelar>Proyectos destacados</h2>
+          <p class="nota-ejemplo" data-revelar>
+            <strong>Contenido de ejemplo.</strong> Los tres casos de esta sección son
+            marcadores de posición para mostrar la maqueta. Sustituye nombres, descripciones
+            e imágenes por proyectos reales de JAPH antes de publicar el sitio.
+          </p>
+        </div>
+
+        <div class="destacados" data-ejemplo>
+          <!-- EJEMPLO: reemplazar por un caso real de JAPH -->
+          <article class="destacado" data-revelar>
+            <div class="destacado-visual">
+              <div class="destacado-pintura" data-parallax="0.05" style="--pintura: linear-gradient(120deg, #7c5cff, #2e8bff 55%, #3df5a0)"></div>
+            </div>
+            <div class="destacado-pie">
+              <div>
+                <h3>Nombre del proyecto uno</h3>
+                <p>Describe aquí el reto del cliente, qué construimos y qué cambió después. Dos o tres líneas bastan.</p>
+              </div>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: reemplazar por un caso real de JAPH -->
+          <article class="destacado" data-revelar>
+            <div class="destacado-visual">
+              <div class="destacado-pintura" data-parallax="0.05" style="--pintura: linear-gradient(150deg, #2e8bff, #7c5cff 60%, #ff6b5b)"></div>
+            </div>
+            <div class="destacado-pie">
+              <div>
+                <h3>Nombre del proyecto dos</h3>
+                <p>Resume el servicio prestado: web, app, automatización o campaña, y el resultado que se midió.</p>
+              </div>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: reemplazar por un caso real de JAPH -->
+          <article class="destacado" data-revelar>
+            <div class="destacado-visual">
+              <div class="destacado-pintura" data-parallax="0.05" style="--pintura: linear-gradient(200deg, #3df5a0, #2e8bff 50%, #7c5cff)"></div>
+            </div>
+            <div class="destacado-pie">
+              <div>
+                <h3>Nombre del proyecto tres</h3>
+                <p>Indica el sector del cliente y el alcance del trabajo para que el visitante se reconozca en el caso.</p>
+              </div>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin-top:2.5rem" data-revelar>
+          <a class="enlace-subrayado" href="proyectos.html">Ver todos los proyectos</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="seccion" id="estadisticas" aria-labelledby="titulo-estadisticas">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-estadisticas" data-revelar>JAPH en números</h2>
+          <p class="nota-ejemplo" data-revelar>
+            <strong>Cifras de ejemplo, no verificadas.</strong> Están puestas para ilustrar
+            el diseño del bloque. Reemplázalas por datos reales y comprobables, o elimina
+            la sección: publicar métricas inventadas puede constituir publicidad engañosa.
+          </p>
+        </div>
+
+        <div class="estadisticas" data-ejemplo>
+          <div class="estadistica" data-revelar>
+            <!-- EJEMPLO: cambia data-contador por la cifra real -->
+            <span class="cifra" data-contador="00">00</span>
+            <p>Proyectos entregados. Sustituye por tu total real.</p>
+            <span class="sello-ejemplo">Ejemplo editable</span>
+          </div>
+          <div class="estadistica" data-revelar>
+            <span class="cifra" data-contador="00">00</span>
+            <p>Clientes activos. Sustituye por tu cifra real.</p>
+            <span class="sello-ejemplo">Ejemplo editable</span>
+          </div>
+          <div class="estadistica" data-revelar>
+            <span class="cifra" data-contador="00" data-sufijo=" años">00</span>
+            <p>Años de trayectoria del equipo.</p>
+            <span class="sello-ejemplo">Ejemplo editable</span>
+          </div>
+          <div class="estadistica" data-revelar>
+            <span class="cifra" data-contador="00" data-sufijo="%">00</span>
+            <p>Indicador propio: satisfacción, renovación o el que midas.</p>
+            <span class="sello-ejemplo">Ejemplo editable</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="seccion" id="testimonios" aria-labelledby="titulo-testimonios">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-testimonios" data-revelar>Lo que dicen los clientes</h2>
+          <p class="nota-ejemplo" data-revelar>
+            <strong>Testimonios de ejemplo.</strong> Ninguna de estas citas corresponde a
+            una persona real. Reemplázalas por opiniones autorizadas por escrito, con
+            nombre, cargo y empresa verificables.
+          </p>
+        </div>
+
+        <div class="testimonios" data-ejemplo>
+          <!-- EJEMPLO: reemplazar por un testimonio real y autorizado -->
+          <figure class="testimonio" data-revelar>
+            <blockquote>Espacio para la cita del cliente. Funciona mejor si menciona un problema concreto y qué cambió después del proyecto.</blockquote>
+            <figcaption>
+              <span>Nombre y apellido · Cargo, Empresa</span>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </figcaption>
+          </figure>
+
+          <!-- EJEMPLO: reemplazar por un testimonio real y autorizado -->
+          <figure class="testimonio" data-revelar>
+            <blockquote>Segunda cita de ejemplo. Conviene que hable de la forma de trabajo: tiempos, comunicación o acompañamiento posterior.</blockquote>
+            <figcaption>
+              <span>Nombre y apellido · Cargo, Empresa</span>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </figcaption>
+          </figure>
+
+          <!-- EJEMPLO: reemplazar por un testimonio real y autorizado -->
+          <figure class="testimonio" data-revelar>
+            <blockquote>Tercera cita de ejemplo. Si el cliente puede dar una cifra verificable, este es el lugar para incluirla.</blockquote>
+            <figcaption>
+              <span>Nombre y apellido · Cargo, Empresa</span>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamada final -->
+    <section class="llamada" aria-labelledby="titulo-llamada">
+      <div class="llamada-orbe" data-parallax="0.08" aria-hidden="true"></div>
+      <div class="envoltura">
+        <h2 class="llamada-titulo" id="titulo-llamada" data-lineas>Cuéntanos qué<br>quieres construir.</h2>
+        <p class="plomo" style="margin-top:1.5rem" data-revelar>
+          Escríbenos con el contexto de tu proyecto y te respondemos con una primera
+          lectura y los siguientes pasos, sin compromiso.
+        </p>
+        <p style="margin-top:2.5rem" data-revelar>
+          <a class="boton boton--solido" href="contacto.html" data-magnetico>Escribir a JAPH</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltura">
+      <p class="pie-titular">JAPH</p>
+      <div class="pie-malla">
+        <div class="pie-columna">
+          <p class="suave">Agencia de ecosistemas digitales. Convertimos ideas en sistemas que funcionan: web, aplicaciones, automatización, marketing, video y marca.</p>
+        </div>
+        <div class="pie-columna">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@japh.studio">hola@japh.studio</a></li>
+            <li><a href="https://wa.me/573000000000">+57 300 000 0000</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+          </ul>
+          <p class="suave" style="font-size:var(--t--1);margin-top:.75rem">Datos de contacto de ejemplo: reemplázalos por los reales.</p>
+        </div>
+      </div>
+      <div class="pie-base">
+        <span>© 2026 JAPH. Bogotá, Colombia.</span>
+        <span>
+          <a class="enlace-subrayado" href="privacidad.html">Privacidad</a>
+          &nbsp;&nbsp;
+          <a class="enlace-subrayado" href="terminos.html">Términos</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

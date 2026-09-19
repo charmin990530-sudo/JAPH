@@ -1,0 +1,214 @@
+/* ==========================================================================
+   JAPH — contacto.css  ·  formulario y canales
+   ========================================================================== */
+
+.contacto-envoltura {
+  display: grid;
+  gap: 3.5rem;
+  padding-block: clamp(9rem, 20vh, 13rem) var(--bloque);
+}
+
+@media (min-width: 64rem) {
+  .contacto-envoltura { grid-template-columns: 0.85fr 1.15fr; gap: 5rem; align-items: start; }
+  .contacto-aparte { position: sticky; top: 18vh; }
+}
+
+.contacto-envoltura h1 { font-size: var(--t-4); margin-bottom: 1.25rem; }
+
+.canal {
+  display: grid;
+  gap: 0.2rem;
+  padding-block: 1.1rem;
+  border-top: 1px solid var(--linea);
+}
+
+.canal:last-of-type { border-bottom: 1px solid var(--linea); }
+.canal span { font-size: var(--t--1); color: var(--texto-suave); }
+.canal a { font-size: var(--t-1); }
+
+/* --- Formulario --------------------------------------------------------- */
+.formulario { display: grid; gap: 1.5rem; }
+
+.campo { display: grid; gap: 0.5rem; }
+
+.campo label { font-size: var(--t--1); color: var(--texto-suave); }
+
+.campo input,
+.campo textarea,
+.campo select {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  color: var(--texto);
+  transition: border-color var(--rapido), background-color var(--rapido);
+}
+
+.campo textarea { resize: vertical; min-height: 9rem; line-height: 1.55; }
+
+.campo input::placeholder,
+.campo textarea::placeholder { color: rgba(163, 163, 198, 0.65); }
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  outline: none;
+  border-color: var(--neon);
+  background: var(--tinta-media);
+}
+
+.campo[data-error="true"] input,
+.campo[data-error="true"] textarea,
+.campo[data-error="true"] select { border-color: #ff7a6b; }
+
+.campo-error {
+  font-size: var(--t--1);
+  color: #ff9c90;
+  min-height: 1.2em;
+}
+
+@media (min-width: 46rem) {
+  .campo-par { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+/* Presupuesto */
+.rango { display: grid; gap: 0.75rem; }
+
+.rango input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: var(--linea-fuerte);
+  border-radius: 2px;
+  padding: 0;
+}
+
+.rango input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--nube);
+  cursor: grab;
+  border: 3px solid var(--tinta);
+  box-shadow: 0 0 0 1px var(--neon);
+}
+
+.rango input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--tinta);
+  border-radius: 50%;
+  background: var(--nube);
+  box-shadow: 0 0 0 1px var(--neon);
+}
+
+.rango output { font-family: var(--display); font-size: var(--t-1); }
+
+/* Estado del envío */
+.aviso {
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--linea);
+  font-size: var(--t--1);
+  display: none;
+}
+
+.aviso[data-estado="exito"] {
+  display: block;
+  border-color: rgba(61, 245, 160, 0.5);
+  background: rgba(61, 245, 160, 0.1);
+}
+
+.aviso[data-estado="error"] {
+  display: block;
+  border-color: rgba(255, 122, 107, 0.5);
+  background: rgba(255, 122, 107, 0.09);
+}
+
+.trampa { position: absolute; left: -9999px; opacity: 0; }
+
+/* --- Aviso: no incluir información sensible ----------------------------- */
+.aviso-sensible {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.15rem;
+  border: 1px dashed rgba(255, 107, 91, 0.5);
+  border-radius: 14px;
+  background: rgba(255, 107, 91, 0.06);
+  font-size: var(--t--1);
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+.aviso-sensible strong { color: var(--coral); font-weight: 600; }
+
+/* --- Casilla de consentimiento ------------------------------------------- */
+.campo-consentimiento { gap: 0.5rem; }
+
+.consentimiento {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: var(--t--1);
+  color: var(--texto-suave);
+  line-height: 1.55;
+}
+
+.consentimiento input[type="checkbox"] {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--linea-fuerte);
+  border-radius: 6px;
+  background: var(--superficie);
+  cursor: pointer;
+  transition: border-color var(--rapido), background-color var(--rapido);
+}
+
+.consentimiento input[type="checkbox"]::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  margin: 2px auto 0;
+  border-right: 2px solid var(--tinta);
+  border-bottom: 2px solid var(--tinta);
+  transform: rotate(45deg) scale(0);
+  transition: transform var(--rapido);
+}
+
+.consentimiento input[type="checkbox"]:checked {
+  background: var(--neon);
+  border-color: var(--neon);
+}
+
+.consentimiento input[type="checkbox"]:checked::after { transform: rotate(45deg) scale(1); }
+
+.consentimiento input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--neon);
+  outline-offset: 3px;
+}
+
+.consentimiento a { color: var(--texto); text-decoration: underline; text-underline-offset: 2px; }
+.consentimiento a:hover { color: var(--neon); }
+
+/* Estado de error: el texto y el borde de la casilla se tiñen de coral */
+.campo-consentimiento[data-error="true"] .consentimiento {
+  color: #ff9c90;
+}
+
+.campo-consentimiento[data-error="true"] input[type="checkbox"] {
+  border-color: #ff7a6b;
+}
+
+/* Preguntas frecuentes al final */
+.faq { display: grid; gap: 0; border-top: 1px solid var(--linea); }
+.faq-item { border-bottom: 1px solid var(--linea); padding-block: 1.5rem; }
+.faq-item h3 { font-size: var(--t-1); margin-bottom: 0.5rem; }
+.faq-item p { color: var(--texto-suave); }

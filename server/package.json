@@ -1,0 +1,26 @@
+{
+  "name": "japh-server",
+  "version": "1.0.0",
+  "description": "API de JAPH — agencia de ecosistemas digitales. Recibe y guarda los mensajes del formulario de contacto.",
+  "main": "src/server.js",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": ["japh", "express", "mongodb", "mongoose", "api"],
+  "author": "JAPH",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0"
+  }
+}

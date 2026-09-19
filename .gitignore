@@ -1,0 +1,33 @@
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Dependencias
+node_modules/
+.npm/
+.pnpm-store/
+
+# Registros
+*.log
+npm-debug.log*
+logs/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Construcción y caché
+dist/
+build/
+.cache/
+coverage/
+
+# Subidas locales
+server/uploads/

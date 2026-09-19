@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · JAPH</title>
+  <meta name="description" content="Cuéntanos tu proyecto y te respondemos con una primera lectura.">
+  <meta name="theme-color" content="#070711">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/contacto.css">
+</head>
+<body>
+  <a class="salta-al-contenido" href="#contenido">Saltar al contenido</a>
+  <div class="grano" aria-hidden="true"></div>
+  <div class="progreso" data-progreso aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+  <div class="cursor-halo" data-cursor-halo aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="marca" href="index.html" aria-label="JAPH, ir a la portada">
+      <span class="marca-semilla" aria-hidden="true"></span>JAPH
+    </a>
+    <nav class="nav-enlaces" aria-label="Navegación principal">
+      <a class="nav-enlace" href="index.html">Inicio</a>
+      <a class="nav-enlace" href="servicios.html">Servicios</a>
+      <a class="nav-enlace" href="proyectos.html">Proyectos</a>
+      <a class="nav-enlace" href="nosotros.html">Nosotros</a>
+      <a class="nav-enlace" href="contacto.html">Contacto</a>
+      <a class="boton" href="contacto.html" data-magnetico="0.22">Empezar un proyecto</a>
+    </nav>
+    <button class="menu-boton" type="button" data-menu-boton aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu data-abierto="false">
+    <nav aria-label="Navegación del menú">
+      <ul class="menu-lista">
+        <li class="menu-item"><a href="index.html">Inicio <span>01</span></a></li>
+        <li class="menu-item"><a href="servicios.html">Servicios <span>02</span></a></li>
+        <li class="menu-item"><a href="proyectos.html">Proyectos <span>03</span></a></li>
+        <li class="menu-item"><a href="nosotros.html">Nosotros <span>04</span></a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto <span>05</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-pie">
+      <a href="mailto:hola@japh.studio">hola@japh.studio</a>
+      <a href="https://wa.me/573000000000">WhatsApp</a>
+      <span>Bogotá · trabajo remoto</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <div class="envoltura contacto-envoltura">
+      <aside class="contacto-aparte">
+        <h1 data-lineas>Empecemos por<br>entender el problema.</h1>
+        <p class="plomo" data-revelar>
+          Cuéntanos qué está pasando hoy en tu operación. Revisamos tu mensaje y te
+          respondemos con una primera lectura y los siguientes pasos.
+        </p>
+
+        <div style="margin-top:2.5rem">
+          <div class="canal">
+            <span>Correo</span>
+            <a class="enlace-subrayado" href="mailto:hola@japh.studio">hola@japh.studio</a>
+          </div>
+          <div class="canal">
+            <span>WhatsApp</span>
+            <a class="enlace-subrayado" href="https://wa.me/573000000000">+57 300 000 0000</a>
+          </div>
+          <div class="canal">
+            <span>Dónde estamos</span>
+            <span>Bogotá, Colombia · trabajo remoto</span>
+          </div>
+        </div>
+
+        <p class="nota-ejemplo" style="margin-top:2rem" data-revelar>
+          <strong>Datos de contacto de ejemplo.</strong> Reemplaza el correo y el número
+          por los reales de JAPH antes de publicar.
+        </p>
+      </aside>
+
+      <section aria-labelledby="titulo-formulario">
+        <h2 class="solo-lectores" id="titulo-formulario">Formulario de contacto</h2>
+
+        <form class="formulario" data-formulario-contacto novalidate>
+          <p class="aviso" data-aviso role="status" aria-live="polite"></p>
+
+          <div class="campo-par">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre completo" required>
+              <span class="campo-error"></span>
+            </div>
+            <div class="campo">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required>
+              <span class="campo-error"></span>
+            </div>
+          </div>
+
+          <div class="campo-par">
+            <div class="campo">
+              <label for="empresa">Empresa <span class="suave">(opcional)</span></label>
+              <input id="empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nombre de tu empresa">
+              <span class="campo-error"></span>
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono <span class="suave">(opcional)</span></label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+57 300 000 0000">
+              <span class="campo-error"></span>
+            </div>
+          </div>
+
+          <div class="campo-par">
+            <div class="campo">
+              <label for="servicio">Servicio de tu interés</label>
+              <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Elige una opción</option>
+                <option value="web">Página web</option>
+                <option value="app-web">App web</option>
+                <option value="app-movil">App móvil</option>
+                <option value="automatizacion">Automatización</option>
+                <option value="marketing">Marketing digital</option>
+                <option value="video">Producción de video</option>
+                <option value="branding">Branding</option>
+              </select>
+              <span class="campo-error"></span>
+            </div>
+            <div class="campo rango">
+              <label for="presupuesto">Presupuesto aproximado</label>
+              <output data-rango-salida for="presupuesto"></output>
+              <input id="presupuesto" name="presupuesto" type="range" min="3000000" max="60000000" step="1000000" value="12000000" data-rango>
+            </div>
+          </div>
+
+          <p class="aviso-sensible">
+            <strong>No incluyas información sensible.</strong> Evita escribir en este
+            formulario datos de salud, información financiera detallada, orientación
+            sexual, creencias religiosas o políticas, datos biométricos u otra
+            información especialmente protegida. Si tu proyecto necesita tratar este
+            tipo de datos, lo definimos aparte en un acuerdo específico.
+          </p>
+
+          <div class="campo">
+            <label for="mensaje">Cuéntanos el contexto</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Qué haces, qué está fallando hoy y para cuándo lo necesitas." required></textarea>
+            <span class="campo-error"></span>
+          </div>
+
+          <div class="trampa" aria-hidden="true">
+            <label for="web">No llenes este campo</label>
+            <input id="web" name="web" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="campo campo-consentimiento" data-error="false">
+            <label class="consentimiento">
+              <input type="checkbox" id="consentimiento" name="consentimiento" required aria-required="true">
+              <span>
+                He leído y acepto la
+                <a href="privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a>.
+              </span>
+            </label>
+            <span class="campo-error"></span>
+          </div>
+
+          <div>
+            <button class="boton boton--solido" type="submit" data-magnetico="0.18">Enviar mensaje</button>
+          </div>
+
+          <p class="suave" style="font-size:var(--t--1)">
+            Usamos tus datos únicamente para responder tu solicitud, tal como se explica
+            en la <a class="enlace-subrayado" href="privacidad.html">política de privacidad</a>.
+          </p>
+        </form>
+      </section>
+    </div>
+
+    <section class="seccion" aria-labelledby="titulo-faq">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-faq" data-revelar>Antes de escribir</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item" data-revelar>
+            <h3>¿Cobran el diagnóstico?</h3>
+            <p>La primera conversación no tiene costo. El diagnóstico formal, con mapa del ecosistema y plan de trabajo, se cotiza aparte y se descuenta del proyecto si seguimos adelante.</p>
+          </div>
+          <div class="faq-item" data-revelar>
+            <h3>¿Trabajan con clientes fuera de Colombia?</h3>
+            <p>Sí. El equipo trabaja de forma remota y podemos facturar en moneda local o en dólares, según el caso.</p>
+          </div>
+          <div class="faq-item" data-revelar>
+            <h3>¿Qué necesitan de mi lado?</h3>
+            <p>Una persona con capacidad de decidir y responder con agilidad. Es la variable que más afecta los tiempos de entrega de cualquier proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltura">
+      <p class="pie-titular">JAPH</p>
+      <div class="pie-malla">
+        <div class="pie-columna">
+          <p class="suave">Agencia de ecosistemas digitales. Convertimos ideas en sistemas que funcionan: web, aplicaciones, automatización, marketing, video y marca.</p>
+        </div>
+        <div class="pie-columna">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@japh.studio">hola@japh.studio</a></li>
+            <li><a href="https://wa.me/573000000000">+57 300 000 0000</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+          </ul>
+          <p class="suave" style="font-size:var(--t--1);margin-top:.75rem">Datos de contacto de ejemplo: reemplázalos por los reales.</p>
+        </div>
+      </div>
+      <div class="pie-base">
+        <span>© 2026 JAPH. Bogotá, Colombia.</span>
+        <span>
+          <a class="enlace-subrayado" href="privacidad.html">Privacidad</a>
+          &nbsp;&nbsp;
+          <a class="enlace-subrayado" href="terminos.html">Términos</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

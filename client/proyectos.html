@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyectos · JAPH</title>
+  <meta name="description" content="Casos de JAPH en web, apps, automatización, marketing, video y marca.">
+  <meta name="theme-color" content="#070711">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/proyectos.css">
+</head>
+<body>
+  <a class="salta-al-contenido" href="#contenido">Saltar al contenido</a>
+  <div class="grano" aria-hidden="true"></div>
+  <div class="progreso" data-progreso aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+  <div class="cursor-halo" data-cursor-halo aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="marca" href="index.html" aria-label="JAPH, ir a la portada">
+      <span class="marca-semilla" aria-hidden="true"></span>JAPH
+    </a>
+    <nav class="nav-enlaces" aria-label="Navegación principal">
+      <a class="nav-enlace" href="index.html">Inicio</a>
+      <a class="nav-enlace" href="servicios.html">Servicios</a>
+      <a class="nav-enlace" href="proyectos.html">Proyectos</a>
+      <a class="nav-enlace" href="nosotros.html">Nosotros</a>
+      <a class="nav-enlace" href="contacto.html">Contacto</a>
+      <a class="boton" href="contacto.html" data-magnetico="0.22">Empezar un proyecto</a>
+    </nav>
+    <button class="menu-boton" type="button" data-menu-boton aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu data-abierto="false">
+    <nav aria-label="Navegación del menú">
+      <ul class="menu-lista">
+        <li class="menu-item"><a href="index.html">Inicio <span>01</span></a></li>
+        <li class="menu-item"><a href="servicios.html">Servicios <span>02</span></a></li>
+        <li class="menu-item"><a href="proyectos.html">Proyectos <span>03</span></a></li>
+        <li class="menu-item"><a href="nosotros.html">Nosotros <span>04</span></a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto <span>05</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-pie">
+      <a href="mailto:hola@japh.studio">hola@japh.studio</a>
+      <a href="https://wa.me/573000000000">WhatsApp</a>
+      <span>Bogotá · trabajo remoto</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <section class="envoltura portada-proyectos" aria-labelledby="titulo-proyectos">
+      <h1 id="titulo-proyectos" data-lineas>Trabajo reciente,<br>contado con resultados.</h1>
+      <p class="plomo" data-revelar>
+        Filtra por el tipo de trabajo que te interesa y mira cómo abordamos cada reto.
+      </p>
+      <p class="nota-ejemplo" data-revelar>
+        <strong>Portafolio de ejemplo.</strong> Los seis casos y el caso destacado de esta
+        página son marcadores de posición para mostrar la maqueta. Reemplázalos por
+        proyectos reales, con permiso del cliente, antes de publicar el sitio.
+      </p>
+    </section>
+
+    <section class="envoltura">
+      <div class="filtros" data-filtros role="group" aria-label="Filtrar proyectos por servicio">
+        <button class="filtro" type="button" data-filtro="todo" aria-pressed="true">Todo</button>
+        <button class="filtro" type="button" data-filtro="web" aria-pressed="false">Web</button>
+        <button class="filtro" type="button" data-filtro="app" aria-pressed="false">Apps</button>
+        <button class="filtro" type="button" data-filtro="automatizacion" aria-pressed="false">Automatización</button>
+        <button class="filtro" type="button" data-filtro="marketing" aria-pressed="false">Marketing</button>
+        <button class="filtro" type="button" data-filtro="marca" aria-pressed="false">Video y marca</button>
+      </div>
+
+      <div class="indice-proyectos" data-indice-proyectos data-ejemplo>
+        <!-- EJEMPLO: duplica este bloque por cada proyecto real -->
+        <article class="proyecto" data-categorias="web marca" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(130deg, #7c5cff, #2e8bff 55%, #3df5a0)"></div>
+            <span class="proyecto-sello">Web · Marca</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo uno</h2>
+              <p>Describe el reto del cliente, qué construimos y qué cambió después.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+
+        <article class="proyecto" data-categorias="app automatizacion" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(40deg, #ff6b5b, #7c5cff 60%, #2e8bff)"></div>
+            <span class="proyecto-sello">App · Automatización</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo dos</h2>
+              <p>Resume el alcance del trabajo y el indicador que se movió.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+
+        <article class="proyecto" data-categorias="web marketing" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(260deg, #2e8bff, #3df5a0 55%, #7c5cff)"></div>
+            <span class="proyecto-sello">Web · Marketing</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo tres</h2>
+              <p>Indica el sector del cliente para que el visitante se reconozca en el caso.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+
+        <article class="proyecto" data-categorias="automatizacion" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(80deg, #3df5a0, #2e8bff)"></div>
+            <span class="proyecto-sello">Automatización</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo cuatro</h2>
+              <p>Explica qué proceso manual se eliminó y cuánto tiempo se liberó.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+
+        <article class="proyecto" data-categorias="marca marketing" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(300deg, #ff6b5b, #7c5cff 60%, #2e8bff)"></div>
+            <span class="proyecto-sello">Video · Marca</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo cinco</h2>
+              <p>Cuenta qué piezas se produjeron y para qué canales.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+
+        <article class="proyecto" data-categorias="app web" data-revelar>
+          <div class="proyecto-visual">
+            <div class="proyecto-pintura" data-parallax="0.06" style="--pintura: linear-gradient(160deg, #7c5cff, #3df5a0)"></div>
+            <span class="proyecto-sello">App · Portal</span>
+          </div>
+          <div class="proyecto-pie">
+            <div>
+              <h2>Proyecto de ejemplo seis</h2>
+              <p>Describe la herramienta construida y quién la usa a diario.</p>
+              <span class="sello-ejemplo">Ejemplo editable</span>
+            </div>
+            <time>Año</time>
+          </div>
+        </article>
+      </div>
+
+      <p class="vacio" data-vacio hidden>No hay proyectos de ese tipo publicados todavía. Prueba con otro filtro.</p>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-caso">
+      <div class="envoltura">
+        <div class="seccion-cabecera">
+          <h2 id="titulo-caso" data-revelar>Un caso en detalle</h2>
+        </div>
+
+        <div class="caso" data-revelar data-ejemplo>
+          <div>
+            <h3>Título del caso destacado</h3>
+            <span class="sello-ejemplo">Caso de ejemplo</span>
+            <p class="suave" style="margin-top:1rem">
+              Usa este espacio para contar el proyecto completo: cómo trabajaba el cliente
+              antes, qué se diseñó y construyó, y qué pasó después del lanzamiento. Es el
+              lugar para explicar decisiones, no solo para mostrar el resultado.
+            </p>
+            <div class="caso-datos">
+              <div>
+                <p class="cifra">00</p>
+                <span>Primer indicador <span class="sello-ejemplo">Ejemplo</span></span>
+              </div>
+              <div>
+                <p class="cifra">00</p>
+                <span>Segundo indicador <span class="sello-ejemplo">Ejemplo</span></span>
+              </div>
+              <div>
+                <p class="cifra">00</p>
+                <span>Duración del proyecto <span class="sello-ejemplo">Ejemplo</span></span>
+              </div>
+              <div>
+                <p class="cifra">00</p>
+                <span>Cuarto indicador <span class="sello-ejemplo">Ejemplo</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="caso-lienzo" data-parallax="0.04" aria-hidden="true"></div>
+        </div>
+
+        <p style="margin-top:3rem" data-revelar>
+          <a class="boton boton--solido" href="contacto.html" data-magnetico>Contar mi caso</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltura">
+      <p class="pie-titular">JAPH</p>
+      <div class="pie-malla">
+        <div class="pie-columna">
+          <p class="suave">Agencia de ecosistemas digitales. Convertimos ideas en sistemas que funcionan: web, aplicaciones, automatización, marketing, video y marca.</p>
+        </div>
+        <div class="pie-columna">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="pie-columna">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@japh.studio">hola@japh.studio</a></li>
+            <li><a href="https://wa.me/573000000000">+57 300 000 0000</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+          </ul>
+          <p class="suave" style="font-size:var(--t--1);margin-top:.75rem">Datos de contacto de ejemplo: reemplázalos por los reales.</p>
+        </div>
+      </div>
+      <div class="pie-base">
+        <span>© 2026 JAPH. Bogotá, Colombia.</span>
+        <span>
+          <a class="enlace-subrayado" href="privacidad.html">Privacidad</a>
+          &nbsp;&nbsp;
+          <a class="enlace-subrayado" href="terminos.html">Términos</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

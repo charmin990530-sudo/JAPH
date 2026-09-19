@@ -1,0 +1,122 @@
+/* ==========================================================================
+   JAPH — nosotros.css  ·  historia, principios y equipo
+   ========================================================================== */
+
+.portada-nosotros {
+  position: relative;
+  padding-block: clamp(9rem, 22vh, 14rem) clamp(3rem, 7vh, 5rem);
+  display: grid;
+  gap: 2rem;
+}
+
+.portada-nosotros h1 { font-size: var(--t-4); max-width: 18ch; }
+
+.retrato-capa {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  aspect-ratio: 16 / 9;
+  background:
+    conic-gradient(from 210deg at 30% 40%, rgba(61, 245, 160, 0.35), rgba(124, 92, 255, 0.28), rgba(255, 107, 91, 0.22), rgba(61, 245, 160, 0.35));
+  filter: saturate(1.05);
+}
+
+.retrato-capa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(48px);
+}
+
+/* --- Principios: cuadrícula con líneas vivas ---------------------------- */
+.principio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.85rem;
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--linea);
+}
+
+@media (min-width: 58rem) {
+  .principio { grid-template-columns: 16rem 1fr; gap: 3rem; align-items: start; }
+}
+
+.principio h3 { font-size: var(--t-1); }
+.principio p { color: var(--texto-suave); }
+
+/* --- Línea de tiempo ---------------------------------------------------- */
+.linea-tiempo { position: relative; padding-left: 1.75rem; }
+
+.linea-tiempo::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: linear-gradient(var(--neon), var(--violeta), transparent);
+}
+
+.hito { position: relative; padding-block: 1.4rem; }
+
+.hito::before {
+  content: "";
+  position: absolute;
+  left: -1.75rem;
+  top: 1.95rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--nube);
+}
+
+.hito time { font-size: var(--t--1); color: var(--neon); }
+.hito p { color: var(--texto-suave); }
+
+/* --- Equipo ------------------------------------------------------------- */
+.persona {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--linea);
+  border-radius: 18px;
+  background: var(--superficie);
+  transition: transform var(--medio), border-color var(--medio);
+}
+
+.persona:hover { transform: translateY(-6px); border-color: var(--linea-fuerte); }
+
+.persona-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  color: var(--tinta);
+  background: var(--savia);
+}
+
+.persona h3 { font-size: var(--t-1); }
+.persona p { font-size: var(--t--1); color: var(--texto-suave); }
+
+/* --- Métricas ----------------------------------------------------------- */
+.metricas {
+  display: grid;
+  gap: 1px;
+  background: var(--linea);
+  border-block: 1px solid var(--linea);
+}
+
+@media (min-width: 46rem) { .metricas { grid-template-columns: repeat(4, 1fr); } }
+
+.metrica {
+  background: var(--fondo);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.metrica span { font-size: var(--t--1); color: var(--texto-suave); }
